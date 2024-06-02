@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <ul class="inicio">
+        <h1>Kalebe Santana da Silva</h1>
+        <h2>Graduando em Ciência da Computação</h2>
+        <h3>Site feito por mim para colocar os meus Certificados de Cursos Completos</h3>
+    </ul>
+
+    <ul class="add">
+        <h1>Adicionar Curso</h1>
+        <form action="{{ url_for('adicionar_curso') }}" method="post" enctype="multipart/form-data">
+            <label for="nome_curso">Nome do Curso:</label>
+            <input type="text" id="nome_curso" name="nome_curso" required>
+            <label for="imagem_curso">Imagem do Curso:</label>
+            <input type="file" id="imagem_curso" name="imagem_curso" accept="image/*" required>
+            <button type="submit">Adicionar Curso</button>
+        </form>
+    </ul>
+
+
+    <h1>Lista de Cursos</h1>
+    <ul class="course-list">
+        {% for curso in cursos %}
+        <li>
+            <img src="{{ url_for('static', filename=curso['imagem']) }}" alt="Imagem do Curso">
+            <span>{{ curso['nome'] }}</span>
+            <form action="{{ url_for('excluir_curso', curso_id=curso['id']) }}" method="post">
+                <button type="submit">Excluir</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+
+.inicio h1, h2, h3{
+    color: white;
+    text-align: center;
+}
+
+/* Estilizando a lista de cursos */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilizando cada item da lista de cursos */
+.course-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilizando a imagem do curso */
+.course-list li img {
+    margin-left: auto; /* Move a imagem para a direita */
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Adiciona cantos arredondados à imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+/* Estilizando o texto do curso */
+.course-list li span {
+    margin-right: auto; /* Move o texto para a esquerda */
+    margin-left: 20px; /* Adiciona um espaço entre o texto e a imagem */
+    color: white;
+}
+
+.add h1{
+    text-align: center;
+}
