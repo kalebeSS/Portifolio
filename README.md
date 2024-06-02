@@ -1,0 +1,1 @@
+Site Programado em python com a biblioteca Flask para criar um portifolio de certificados onde consigo adicionar o nome do curso e a foto. coloca a foto na pasta static e o codigo app.py tem um comando que adiciona a foto.
